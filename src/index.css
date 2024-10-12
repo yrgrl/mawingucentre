@@ -72,7 +72,7 @@ h1 {
   padding:1rem;
   width: 100%;
   text-align: center;
-  padding: 13rem;
+  padding: 15%;
 }
 .search {
   display: flex;
@@ -82,8 +82,8 @@ h1 {
   width: 100%;
 }
 .app input {
-  width: 300px;
-  max-width: none;
+  width: 200px;
+  max-width: 80%;
   padding:0.5rem 1rem;
   font-size: 1.2rem;
   border-radius: 25px;
