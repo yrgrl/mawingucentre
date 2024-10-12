@@ -34,7 +34,7 @@ h1 {
 }
 @media (min-width: 768px) {
   .app .search {
-    padding: 0.5rem;
+    padding: 1.5rem;
   }
   .app input {
     width: 180px; 
@@ -72,7 +72,7 @@ h1 {
   padding:1rem;
   width: 100%;
   text-align: center;
-  padding: 13rem;
+  padding:15%;
 }
 .search {
   display: flex;
