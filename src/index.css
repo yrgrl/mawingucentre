@@ -34,6 +34,7 @@ h1 {
 }
 @media (min-width: 350px) {
   .app input {
+    align-items: center;
     width: 180px; 
     font-size: 1rem;
   }
