@@ -33,18 +33,6 @@ h1 {
   color: #070707;
 }
 @media (min-width: 768px) {
-  .app {
-    grid-template-columns: 1fr minmax(auto, 600px) 1fr;
-  }
-
-  .app .search {
-    grid-column: 2;
-  }
-
-  .container {
-    grid-column: 2;
-  }
-}
 .app {
   display: grid;
   grid-template-rows: auto 1fr;
@@ -85,7 +73,7 @@ h1 {
   width: 100%;
 }
 .app input {
-  width: 100%;
+  width: 300px;
   max-width: none;
   padding:0.7rem 1.5rem;
   font-size: 1.2rem;
@@ -137,7 +125,7 @@ h1 {
 .bold {
   font-weight: 700;
 }
-
+}
 
 
 
