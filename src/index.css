@@ -32,8 +32,23 @@ h1 {
   font-weight: bold;
   color: #070707;
 }
+@media (min-width: 768px) {
+  .app {
+    grid-template-columns: 1fr minmax(auto, 600px) 1fr;
+  }
 
+  .app .search {
+    grid-column: 2;
+  }
+
+  .container {
+    grid-column: 2;
+  }
+}
 .app {
+  display: grid;
+  grid-template-rows: auto 1fr;
+  min-height: 100vh;
   width: 100%;
   height: 100vh;
   position: relative;
@@ -53,12 +68,24 @@ h1 {
   z-index: -1;
 }
 
-.app .search {
+.app .search {display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem 1rem;
+  width: 100%;
   text-align: center;
   padding: 13rem;
 }
-
+.search {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem 1rem;
+  width: 100%;
+}
 .app input {
+  width: 100%;
+  max-width: 300px;
   padding: .7rem 1.5rem;
   font-size: 1.2rem;
   border-radius: 25px;
@@ -72,15 +99,15 @@ h1 {
 }
 
 .container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   max-width: 600px;
   height: 600px;
   margin: auto;
   padding: 0 1rem;
   position: relative;
-  top:-8%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  top: -8%;
 }
 
 .app .top {
