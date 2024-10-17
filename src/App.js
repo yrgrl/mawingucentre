@@ -10,7 +10,19 @@ function App() {
   const searchLocation = (event) => {
     if (event.key === 'Enter') {
       axios.get(url).then((response) => {
-        setWeatherResults(prevResults => [response.data, ...prevResults]);
+        setWeatherResults(prevResults => {
+          const newResult = response.data;
+          const existingIndex = prevResults.findIndex(result => result.name === newResult.name);
+          
+          let newResults;
+          if (existingIndex !== -1) {
+            newResults = prevResults.filter((_, index) => index !== existingIndex);
+          } else {
+            newResults = [...prevResults];
+          }
+          newResults.unshift(newResult);
+          return newResults.slice(0, 5);
+        });
         console.log(response.data);
       }).catch(error => {
         console.error("Error fetching weather data:", error);
